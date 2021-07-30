@@ -1,0 +1,32 @@
+mat-toolbar{
+    justify-content: center;
+}
+
+.control-title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.container{
+display: flex;
+width: 100%;
+justify-content: center;
+flex-direction: column;
+
+}
+
+mat-selection-list{
+    margin-top: 10rem;
+    border: solid;
+    border-width: 1px;
+    border-radius: 1rem;
+    width: 50%;
+    background-color: black;
+}
+
+mat-form-field{
+    border: solid;
+    border-width: 1px;
+    border-radius: 1rem;
+    width: 50%;
+}

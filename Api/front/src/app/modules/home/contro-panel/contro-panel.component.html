@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <span class="control-title">Control Panel</span>
+</mat-toolbar>
+<div class="container">
+  <mat-selection-list #acti [multiple]="false">
+    <mat-list-option *ngFor="let a of actions" [value]="a">
+      {{ a }}
+    </mat-list-option>
+  </mat-selection-list>
+  <div id="option" hidden>{{acti.selectedOptions.selected[0]?.value}}</div>
+  <button (click)="change()"></button>
+  <mat-form-field appearance="fill" *ngIf= "open">
+    <mat-label >Set yout new password</mat-label>
+    <input type="text" matInput autocomplete="off" [(ngModel)]="password"/>
+  </mat-form-field>
+</div>

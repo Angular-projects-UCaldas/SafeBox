@@ -1,0 +1,12 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .navbar-title{
+      font-size: larger;
+  }
+
+  .example-icon{
+      background-color: #7B1FA2;
+      border-radius: 0.5rem;
+  }

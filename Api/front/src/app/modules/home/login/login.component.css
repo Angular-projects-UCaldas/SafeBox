@@ -1,0 +1,41 @@
+.login-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.img-cover{
+    width: 100%;
+    height: 100vh;
+}
+
+.img-container{
+    width: 70%;
+    height: 110%;
+}
+
+.form-container{
+    width: 30%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 17%;
+    padding-bottom: 30%;
+}
+
+.form-title{
+    margin-bottom: 1rem;
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+}
+
+.form-input{
+    width: 70%;
+}
+
+mat-form-field.mat-form-field {
+    font-size: 18px;
+  }
