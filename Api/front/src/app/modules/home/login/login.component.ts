@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatSnackBar } from "@angular/material/snack-bar";
+import { environment } from "src/environments/environment.prod";
 
 @Component({
   selector: 'app-login',
@@ -19,8 +20,7 @@ export class LoginComponent implements OnInit {
   }
 
   public login() {
-    console.log(this.email);
-    if(this.email == "email@test.com" && this.password == "1234") {
+    if(this.email == environment.email && this.password == environment.password) {
       this.router.navigate(['/controlpanel']);
     }else this.openSnackBar("Wrong Password", "Dissmis");
   }

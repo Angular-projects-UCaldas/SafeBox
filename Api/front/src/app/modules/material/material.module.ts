@@ -9,6 +9,7 @@ import { MatGridListModule } from "@angular/material/grid-list";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatListModule } from "@angular/material/list";
+import { MatTableModule } from "@angular/material/table";
 
 @NgModule({
   declarations: [],
@@ -24,7 +25,8 @@ import { MatListModule } from "@angular/material/list";
     MatGridListModule,
     MatButtonModule,
     MatSnackBarModule,
-    MatListModule
+    MatListModule,
+    MatTableModule
   ], 
   providers: []
 })

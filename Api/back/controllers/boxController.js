@@ -8,18 +8,37 @@ const parser = new serialPort.parsers.Readline();
 
 portSerial.pipe(parser);
 
+let status = [];
+
 parser.on('data', (data) => {
     console.log(data);
+    status.push({"status" : data});
 });
 
 
-const getBox = (req, res) => {
-    portSerial.write(req.body.option);
-    
-    portSerial.write(req.body.password);
-  
-//console.log(req.body.option);
-    res.status(200).send(req.body.option);
+const sendStatusBox = (req, res) => {
+
+    res.status(200).send({data: status});
 };
 
-module.exports = {getBox};
+const openBox = (req, res) => {
+    portSerial.write("1");
+    res.status(200).send({message: "Box Opened"});
+}
+
+const changePassword = (req, res) => {
+    portSerial.write(req.body.data);
+    res.status(200).send({message: "Password Changed"});
+}
+
+const changeTime = (req, res) => {
+    portSerial.write(req.body.data);
+    res.status(200).send({message: "Time Changed"});
+}
+
+module.exports = {
+    openBox,
+    sendStatusBox,
+    changePassword,
+    changeTime
+};
